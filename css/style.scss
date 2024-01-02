@@ -1,0 +1,705 @@
+*{
+    padding: 0;
+    margin: 0;
+    display: block;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+@mixin card () {
+    width: 100%;
+    padding: 4rem 0;
+}
+@mixin grid ($repeat){
+    display: grid;
+    grid-template-columns: $repeat;
+    gap: 3rem   ;
+}
+@mixin title () {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+body ::selection{
+    background-color: red;
+    color: white;
+}
+.overlay{
+ filter: brightness(0.5);
+}
+.header{
+  background-image: url(/images/hero_5.jpg);
+  background-size: cover;
+  height: 100vh;
+  .navigation{ 
+    height: 20vh;
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+   a{
+    text-decoration: none;
+    display: inline;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #e5e5e5;
+    font-size: 1.1rem;
+    &:first-of-type{
+      color: rgb(255, 255, 255);
+    }
+    &:hover{
+      color: white;
+    }
+   }
+   button{
+    display: inline;
+    padding: 10px 20px ;
+    background: 0;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white
+   }
+   i{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    display: none;
+   }
+   b{
+    font-size: 1.7rem;
+    color: red;
+    p{
+      display: inline;
+      color: white
+    }
+   }
+  }
+}
+.banner{
+  height: 100vh;
+ h1{
+  font-size: 4.5rem;
+  color: white;
+  text-align: center;
+  margin-top: 16%;
+ }
+ .bannerbotom{
+ height: 17vh;         
+  border-radius: 7px;
+  margin-top: 32vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+background-color: rgb(255, 255, 255);
+box-shadow: 0 0 20px rgb(255, 255, 255);
+@include grid(repeat(5,1fr));
+align-items: center;
+.item:last-of-type button{
+padding: 10px 30px;
+color: white;
+  border-radius: 20px;
+ background-color: red;
+  border: 0;
+  margin-top: 1rem;
+}
+button{
+  border: 1px solid black;
+  padding: 20px 7rem;
+  border-radius: 5px;
+}
+
+select{
+  padding: 10px 25px;
+  border-radius: 5px
+}
+
+ }
+}
+}
+.Consonan{
+    @include card();
+    background-color: rgb(248, 253, 255);
+    .Consonan__contact{
+    @include grid(40% 60%);
+    margin-left: 3rem;
+    margin-right: 7rem;
+    margin-top: 10rem;
+    align-items: center;
+
+    img{
+        border-radius: 5px;
+    }
+    h2{
+font-size: 3rem;
+margin-bottom: 1rem;
+    }
+    p{
+        line-height: 1.6;
+        opacity: 0.7;
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+    button{
+        padding: 10px 35px ;
+        color: white;
+        border-radius: 30px;
+        border: 0;
+        background-color: rgb(255, 0, 0);
+        &:hover{
+            background-color: rgb(181, 0, 0);
+
+        }
+    }
+    }
+
+}
+
+
+.Leader {
+  width: 100%;
+  padding: 4rem 0;
+.title{
+ h3{
+text-align: center;
+font-size: 3rem;
+margin-bottom: 3rem;
+
+   }
+
+
+}
+  .Leader__content {
+  @include grid(repeat(3,1fr));
+   gap: 2rem;
+   img{
+ filter: brightness(0.7);
+   }
+     
+  }
+.card { 
+    width: 390px;
+    height: 400px;    
+  }
+
+  .content {
+    width: 360px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+    box-shadow: 0px 0px 10px 1px #c4c4c4ee;
+  }
+
+  .front,
+  .back {
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+  }
+
+  .back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+ 
+
+
+  .back-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    .title {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;   
+    h2{
+        font-weight: 100;
+    }
+    }
+  }
+
+  .card:hover .content {
+    transform: rotateY(180deg);
+  }
+  @keyframes rotation_481 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+
+  .front {
+    transform: rotateY(180deg);
+    background-color: #fff;
+    height: 100%;
+    
+
+  }
+
+  .front .front-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+      padding-top: 10px;
+      line-height: 1.8;
+      opacity: 0.7;
+
+    }
+   
+    .title {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      height: 20vh;
+      width: 80%;
+     
+      img{
+        width: 20%;
+        height: 40%;
+        margin-top: 2rem;
+        border-radius: 100%;
+      
+      }
+      h2{
+        font-size: 1rem;
+        opacity: 0.7;
+
+      }
+    }
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+.Rooms{
+    @include card();
+    .title{
+        width: 55%;
+        margin: 0 auto;
+        @include title();
+        h2{
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            line-height: 1.6;
+            opacity: 0.7;
+        }
+    }
+    .Rooms__contact{
+        @include grid(repeat(3,1fr));
+        text-align: center;
+        margin-top: 2rem;
+        .img{
+            overflow: hidden;
+        }
+        img{
+            transition: all 0.2s linear;
+           &:hover{
+transform: scale(1.1);
+transition: all 0.2s linear;
+           }
+        }
+        h3{
+            font-size: 1.8rem;
+            font-weight: 200;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        span{
+            color: rgb(206, 43, 43);
+            font-size: 1.1rem;
+        }
+    }
+}
+.Photos{
+    background-color: rgb(248, 253, 255);
+
+    @include card();
+    .title{
+        width: 55%;
+        margin: 0 auto;
+        @include title();
+        h2{
+            font-size: 3rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+    }
+    .Photos__contact{
+      margin-left: 5rem;
+      margin-right: 5rem;
+        height: 100vh;
+       
+    }
+    
+}
+.Restaurant{
+    background-image: url(/images/hero_3.jpg);
+    background-size: 100% 100%;
+    height: 160vh;
+    overflow: hidden;
+    background-attachment: fixed;
+    @include card();
+    .title{
+        @include title();
+        width: 55%;
+        margin: 0 auto;
+        color: white;
+        
+        h2{
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        p{  
+            line-height: 1.8;  
+            margin-bottom: 3rem;
+        }
+        h3{
+           display: inline;
+           color: rgb(242, 19, 19);
+            margin-left: 2rem;
+            font-size: 1.5rem;
+            &:hover{
+                color: rgb(177, 5, 5);
+            }
+&:first-of-type{
+    color: white;
+    border-bottom: 3px solid white;  
+}
+        }
+    }
+.Restaurant__contact{
+  @include grid(repeat(2,1fr));
+  margin-top: 5rem;
+  color: white;
+    span{
+      color: rgb(255, 0, 0);
+      font-size: 1.5rem;
+    }
+    p{
+      opacity: 0.8;
+      margin-top: 0.5rem;
+    }
+    h3{
+      font-size: 2rem;
+      font-weight: 200;
+    }
+}
+
+}
+.People{
+margin-bottom: 10rem;
+  .title{
+    @include title();
+    font-size: 2.5rem;
+    margin-top: 5rem;
+  }
+  .People__contact{
+    padding-top: 3rem;
+@include grid(repeat(3,1fr));
+text-align: center;
+  }
+  img{
+    width: 20%;
+    height: 25%;
+    margin: 0 auto;
+    border-radius: 100%;
+    margin-bottom: 2rem;
+  }
+  p{
+    opacity: 0.8;
+    line-height: 1.7;
+    width: 90%;
+    margin: 0 auto;
+  }
+  span{
+    opacity: 0.8;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+// Events
+.Events{
+  background-color: rgb(248, 253, 255);
+
+  @include card();
+  .title {
+    width: 55%;
+    margin: 0 auto;
+    @include title();
+    h2{
+      font-size: 3rem;
+    }
+    p{
+      line-height: 1.6;
+      opacity: 0.8;
+    }
+    }
+    .Events__contact{
+      @include grid(repeat(3,1fr));
+      padding-top: 2rem;
+      .item{
+        background-color: white;
+        box-shadow: 0 0 20px rgb(239, 239, 239);
+        height: 75vh;
+        span{
+          opacity: 0.5;
+          margin-top: 1rem;
+          margin-left: 2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        h2{
+          font-weight: 200;
+          margin-left: 2rem;
+          margin-right: 1rem;
+          line-height: 1.3;
+          transition: all 0.4s linear;
+          &:hover{
+            color: red;
+            transition: all 0.4s linear;
+          }
+        }
+        p{
+          line-height: 1.5;
+          opacity: 0.8 ;
+          margin-left: 2rem;
+          margin-top: 1.4rem;
+        }
+      }
+    }
+}
+.contact{
+  @include card();
+  .title {
+    width: 55%;
+    margin:  0 auto;
+    @include title();
+    h2{
+      margin-left: 6rem;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p{
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+  }
+  .contact__contact{
+@include grid(60% 40%);
+.item:first-of-type{
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 1px;
+  padding: 20px 20px;
+  height: 90vh;
+}
+input{
+width: 40%;
+height: 7vh;
+margin-left: 1rem;
+margin-top: 2rem;
+border-radius: 5px;
+text-indent: 10px ;
+border: 3px solid rgb(228, 228, 228);
+display: inline;
+color: red;
+outline: 0;
+&:hover{
+  border: 3px solid red;
+  
+}
+}
+.email ,textarea{
+  width: 83%;
+}
+textarea{
+outline: 0;
+  color: red;
+  margin-left: 1rem;
+  border: 3px solid rgb(228, 228, 228);
+  border-radius: 5px;
+margin-top: 2rem;
+text-indent: 10px;
+height: 30vh;
+font-size: 1rem;
+&:hover{
+  border: 3px solid red;
+}
+}
+button{
+  background-color: red;
+  color: white;
+  border: 0;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 10px 30px ;
+  margin-left: 1rem;
+  margin-top: 3rem;
+  &:hover{
+    background-color: rgb(174, 0, 0);
+  }
+}
+  }
+  span{
+    opacity: 0.8;
+    margin-bottom: 1rem ;
+  }
+  h2{
+    line-height: 1.4;
+    font-weight: 200;
+    width: 70%;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+.footer{
+  margin-top: 3rem;
+  height: 100vh;
+  @include card();
+  background-image: url(/images/slider-6.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  filter: brightness(0.5);
+.title{
+  font-size: 1.5rem;
+  color: white;
+  height: 26vh;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  button{
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 15px 30px  ;
+    border: 3px solid white;
+    border-radius: 30px;
+    &:hover{
+      background-color: red;
+      border: 0
+    }
+  }
+}
+.footer__contact{
+  @include grid(repeat(4,1fr));
+  background-color: #2c2c2c;
+  color: white;
+  height: 65vh;
+  bottom: 0;
+  padding-top: 5rem ;
+  padding-left: 10%;
+  padding-right: 5%;
+  a{
+    text-decoration: none;
+    color:rgb(223, 223, 223) ;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    &:hover{
+      color: rgb(255, 255, 255);
+    }
+  }
+  .item:last-of-type{
+i{
+  color: white;
+}
+  }
+  }
+i{
+  color: red;
+  margin-right: 1rem;
+ 
+}
+p{
+  margin-top: 1.5rem;
+}
+span{
+  font-size: 1.1rem;
+}
+.tr{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5rem;
+  margin-top: 3rem;
+  border: 0;
+  border-bottom: 2px solid white;
+ 
+  input{
+    background-color: #2c2c2c;
+border: 0;
+outline: 0;
+font-size: 1rem;
+margin-bottom: 1rem;
+color: white;
+  }
+}
+
+}
+.copyright{
+  color: white;
+  margin-bottom: 10rem;
+  background-color: #161616;
+  display: flex;
+  justify-content: space-around;
+align-items: center;
+height: 20vh;
+span{
+  opacity: 0.7;
+}
+i{
+&:first-of-type{
+ margin-left: 40%;
+}
+font-size: 1.3rem;
+color: rgb(225, 225, 225);
+&:hover{
+  color: white;
+}
+}
+}
